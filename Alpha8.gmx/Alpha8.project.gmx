@@ -5,19 +5,27 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound"/>
-  <sprites name="sprites"/>
+  <sprites name="sprites">
+    <sprite>sprites\spr_explosion</sprite>
+  </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <fonts name="fonts">
     <font>fonts\f_1</font>
+    <font>fonts\f_2</font>
   </fonts>
   <objects name="objects">
     <object>objects\obj_spawner</object>
+    <object>objects\obj_mainspawner</object>
+    <object>objects\obj_endspawner</object>
     <object>objects\obj_home</object>
     <object>objects\obj_letters</object>
+    <object>objects\obj_explode</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room0</room>
+    <room>rooms\rm_start</room>
+    <room>rooms\rm_main</room>
+    <room>rooms\rm_end</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

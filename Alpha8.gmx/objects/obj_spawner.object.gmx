@@ -4,7 +4,7 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>0</depth>
-  <persistent>0</persistent>
+  <persistent>-1</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -76,13 +76,14 @@ alarm[0] = alarm_speed;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/*for (i = 0; i &lt; cars.length; i++) {
-    text += cars[i] + "&lt;br&gt;";
-} */
-//instance_create(room_width-10, irandom_range(10, room_height-10), obj_home);
-
-if( alarm_speed &lt;= 2){
-alamr_speed =2;
+            <string>
+if(room == rm_main){
+    if( alarm_speed &lt;= 2){
+    alamr_speed =2;
+    }
+}
+if(Lives &lt;= 0 &amp;&amp; room != rm_end){
+room_goto(rm_end);
 }
 </string>
           </argument>
@@ -106,9 +107,14 @@ alamr_speed =2;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_text(10, 10, "Points: " + string(points));
+            <string>
+if(room== rm_main){
+draw_set_halign(fa_left);
+//draw_set_valign(fa_middle);
+draw_text(10, 10, "Points: " + string(points));
 
 draw_text(room_width - 100, 10, "Lives: " + string(Lives));
+}
 </string>
           </argument>
         </arguments>

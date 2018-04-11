@@ -49,9 +49,7 @@ letter =  choose("A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M"
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
-
-
+            <string>instance_create(x,y, obj_explode);
 </string>
           </argument>
         </arguments>
